@@ -31,4 +31,6 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
+          external_repository: jo-minjun/jo-minjun.github.io
+          publish_branch: main
           publish_dir: ./public
