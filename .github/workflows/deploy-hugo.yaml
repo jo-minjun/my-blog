@@ -90,6 +90,6 @@ jobs:
 
     - name: Check if new build was made
       if: steps.build.outputs.was_new_build_created == 'true'
-      run: echo "YAAASSSS new build."
+        run: echo "YAAASSSS new build."
       if: steps.build.outputs.was_new_build_created == 'false'
-      run: echo "NOOOOOOO new build."
+        run: echo "NOOOOOOO new build."
