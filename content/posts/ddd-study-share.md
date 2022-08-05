@@ -4,9 +4,9 @@ date = 2022-08-06T01:13:45+09:00
 title = "DDD 스터디 공유"
 description = ""
 slug = ""
-authors = [조민준]
-tags = [DDD, Hexagonal Architecture]
-categories = [Design/Architecture]
+authors = ["조민준"]
+tags = ["DDD", "Hexagonal Architecture"]
+categories = ["Design/Architecture"]
 externalLink = ""
 series = []
 +++
