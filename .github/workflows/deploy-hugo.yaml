@@ -1,89 +1,34 @@
-name: github pages
-
-# on:
-#   push:
-#     branches:
-#       - main # Set a branch to deploy
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - name: Git checkout
-#         uses: actions/checkout@v2
-
-#         # with:
-#         #   token: ${{ secrets.GIT_TOKEN }}
-#         #   submodules: recursive
-
-#       - name: Setup Hugo
-#         uses: peaceiris/actions-hugo@v2
-#         with:
-#           hugo-version: 'latest'
-#           # extended: true
-
-#       - name: Build
-#         run: hugo --minify
-
-#       # - name: site-verification
-#       #   run: echo "${{ secrets.SITE_VERIFICATION }}" > ./public/google34bf590cfe76298c.html
-
-#       - name: Deploy
-#         uses: peaceiris/actions-gh-pages@v3
-#         with:
-#           # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-#           personal_token: ${{ secrets.GIT_TOKEN }}
-#           external_repository: jo-minjun/jo-minjun.github.io
-#           user_name: jo-minjun
-#           user_email: alswns9288@gmail.com
-#           publish_branch: main
-#           publish_dir: ./public
+name: GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main # Set a branch to deploy
+  pull_request:
 
 jobs:
-  build_and_deploy_hugo_site:
-    runs-on: ubuntu-latest
-    name: Build and deploy Hugo site
-
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.88.1'
-          # hugo-version: 'latest'
+          hugo-version: '0.91.2'
+          # extended: true
 
-      - name: Checkout repo on source_branch
-        uses: actions/checkout@v2
-        with:
-          submodules: 'recursive'
-          # <<recommended if project uses git submodules for any purpose>>
-          # <<required if deploying to git submodule directory>>
-          token: ${{ secrets.GIT_TOKEN }} # <<if needed for private repos>>
-          fetch-depth: '0'
-          # <<fetch-depth: '0' currently required until shallow clone problems are solved>>
+      - name: Build
+        run: hugo --minify
 
-      - name: Build site and push to release branch
-        uses: aormsby/hugo-deploy-to-pages@v2.1
-        id: build_step # <<for outputs>>
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          personal_token: ${{ secrets.GIT_TOKEN }}
-          user_name: jo-minjun
-          user_email: alswns9288@gmail.com
-          external_repository: jo-minjun/jo-minjun.github.io
-          publish_branch: main
+          github_token: ${{ secrets.GIT_TOKEN }}
           publish_dir: ./public
-          source_branch: 'main'
-          release_branch: 'release'
-
-          # submodule_release_branch: 'subbed' <<only provide if you are publishing to directory with git submodule>>
-          # full_rebuild: true
-          # hugo_publish_directory: 'documents'   <<publish to another directory if needed>>
-          # hugo_build_options: '-D --minify --ignoreCache' <<hugo build cis customizable>>
-          # commit_message: "I love this action."
-          # test_mode: true <<enable to run a few verification tests before your first live run>>
-
-          # <<lots of other options!>>
