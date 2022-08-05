@@ -71,13 +71,14 @@ jobs:
         id: build_step # <<for outputs>>
         with:
           personal_token: ${{ secrets.GIT_TOKEN }}
-          external_repository: jo-minjun/jo-minjun.github.io
           user_name: jo-minjun
           user_email: alswns9288@gmail.com
-          # publish_branch: main
-          # publish_dir: ./public
+          external_repository: jo-minjun/jo-minjun.github.io
+          publish_branch: main
+          publish_dir: ./public
           source_branch: 'main'
-          release_branch: 'release'
+          # release_branch: 'release'
+
           # submodule_release_branch: 'subbed' <<only provide if you are publishing to directory with git submodule>>
           # full_rebuild: true
           # hugo_publish_directory: 'documents'   <<publish to another directory if needed>>
