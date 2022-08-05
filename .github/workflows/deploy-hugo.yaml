@@ -77,7 +77,7 @@ jobs:
           # publish_branch: main
           # publish_dir: ./public
           source_branch: 'main'
-          release_branch: 'main'
+          release_branch: 'release'
           # submodule_release_branch: 'subbed' <<only provide if you are publishing to directory with git submodule>>
           # full_rebuild: true
           # hugo_publish_directory: 'documents'   <<publish to another directory if needed>>
