@@ -39,7 +39,6 @@ name: github pages
 #           publish_branch: main
 #           publish_dir: ./public
 
-
 on:
   push:
     branches:
@@ -51,45 +50,39 @@ jobs:
     name: Build and deploy Hugo site
 
     steps:
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        # hugo-version: '0.88.1'
-        hugo-version: 'latest'
-    
-    - name: Checkout repo on source_branch
-      uses: actions/checkout@v2
-      with:
-        submodules: 'recursive'
-        # <<recommended if project uses git submodules for any purpose>>
-        # <<required if deploying to git submodule directory>>
-        token: ${{ secrets.GIT_TOKEN }}   # <<if needed for private repos>>
-        fetch-depth: '0'
-        # <<fetch-depth: '0' currently required until shallow clone problems are solved>>
-        
-    - name: Build site and push to release branch
-      uses: aormsby/hugo-deploy-to-pages@v2.1
-      id: build_step  # <<for outputs>>
-      with:
-        personal_token: ${{ secrets.GIT_TOKEN }}
-        external_repository: jo-minjun/jo-minjun.github.io
-        user_name: jo-minjun
-        user_email: alswns9288@gmail.com
-        publish_branch: main
-        publish_dir: ./public
-        # source_branch: 'main'
-        # release_branch: 'main'
-        # submodule_release_branch: 'subbed' <<only provide if you are publishing to directory with git submodule>>
-        # full_rebuild: true
-        # hugo_publish_directory: 'documents'   <<publish to another directory if needed>>
-        # hugo_build_options: '-D --minify --ignoreCache' <<hugo build cis customizable>>
-        # commit_message: "I love this action."
-        # test_mode: true <<enable to run a few verification tests before your first live run>>
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          # hugo-version: '0.88.1'
+          hugo-version: 'latest'
 
-        # <<lots of other options!>>
+      - name: Checkout repo on source_branch
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+          # <<recommended if project uses git submodules for any purpose>>
+          # <<required if deploying to git submodule directory>>
+          token: ${{ secrets.GIT_TOKEN }} # <<if needed for private repos>>
+          fetch-depth: '0'
+          # <<fetch-depth: '0' currently required until shallow clone problems are solved>>
 
-    - name: Check if new build was made
-      if: steps.build.outputs.was_new_build_created == 'true'
-        run: echo "YAAASSSS new build."
-      if: steps.build.outputs.was_new_build_created == 'false'
-        run: echo "NOOOOOOO new build."
+      - name: Build site and push to release branch
+        uses: aormsby/hugo-deploy-to-pages@v2.1
+        id: build_step # <<for outputs>>
+        with:
+          personal_token: ${{ secrets.GIT_TOKEN }}
+          external_repository: jo-minjun/jo-minjun.github.io
+          user_name: jo-minjun
+          user_email: alswns9288@gmail.com
+          publish_branch: main
+          publish_dir: ./public
+          # source_branch: 'main'
+          # release_branch: 'main'
+          # submodule_release_branch: 'subbed' <<only provide if you are publishing to directory with git submodule>>
+          # full_rebuild: true
+          # hugo_publish_directory: 'documents'   <<publish to another directory if needed>>
+          # hugo_build_options: '-D --minify --ignoreCache' <<hugo build cis customizable>>
+          # commit_message: "I love this action."
+          # test_mode: true <<enable to run a few verification tests before your first live run>>
+
+          # <<lots of other options!>>
