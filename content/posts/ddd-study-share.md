@@ -91,6 +91,7 @@ series = []
 - **도메인 모델**
   - 특정 도메인을 개념적으로 표현한 것
   - 도메인에 대한 이해도에 따라 도메인 모델도 변경된다.
+
     ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fe98397-c546-457c-8961-909aab4bde0c/1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T161805Z&X-Amz-Expires=86400&X-Amz-Signature=24aa49b571b9900c4e02b65ec715bac96de0666c46dc80b86765fd91722b7b87&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%221.png%22&x-id=GetObject](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fe98397-c546-457c-8961-909aab4bde0c/1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220805%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220805T161805Z&X-Amz-Expires=86400&X-Amz-Signature=24aa49b571b9900c4e02b65ec715bac96de0666c46dc80b86765fd91722b7b87&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%221.png%22&x-id=GetObject)
 - 위와 같은 서브 도메인을 하나의 도메인으로 표현하기는 불가능에 가깝다.
 - 서브 도메인마다 같은 대상이라도 지칭하는 용어가 다를 수 있다.
