@@ -1,4 +1,4 @@
-baseURL: 'http://blog.minjun.note'
+baseURL: 'http://minjun.note'
 languageCode: 'kr'
 title: "minjun's note"
 theme: 'hugo-PaperMod'
@@ -7,15 +7,15 @@ menu:
   main:
     - identifier: posts
       name: Posts
-      url: /posts/
+      url: posts/
       weight: 10
     - identifier: categories
       name: Categorie
-      url: /categories/
+      url: categories/
       weight: 10
     - identifier: tags
       name: Tags
-      url: /tags/
+      url: tags/
       weight: 10
 
 params:
