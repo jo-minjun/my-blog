@@ -1,7 +1,7 @@
 baseURL: 'http://blog.minjun.note'
 languageCode: 'kr'
 title: "minjun's note"
-theme: 'PaperMod'
+theme: 'hugo-PaperMod'
 
 menu:
   main:
