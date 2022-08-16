@@ -1,4 +1,4 @@
-baseURL: 'http://minjun.note'
+baseURL: 'https://jo-minjun.github.io/'
 languageCode: 'kr'
 title: "minjun's note"
 theme: 'hugo-PaperMod'
