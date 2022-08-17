@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on minjun&#39;s note</title>
+    <link>http://minjun.note/tags/</link>
+    <description>Recent content in Tags on minjun&#39;s note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Tue, 16 Aug 2022 22:02:29 +0900</lastBuildDate><atom:link href="http://minjun.note/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>html</title>
+      <link>http://minjun.note/tags/html/</link>
+      <pubDate>Tue, 16 Aug 2022 22:02:29 +0900</pubDate>
+      
+      <guid>http://minjun.note/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>http://minjun.note/tags/http/</link>
+      <pubDate>Tue, 16 Aug 2022 22:02:29 +0900</pubDate>
+      
+      <guid>http://minjun.note/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>http://minjun.note/tags/css/</link>
+      <pubDate>Tue, 16 Aug 2022 22:00:46 +0900</pubDate>
+      
+      <guid>http://minjun.note/tags/css/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

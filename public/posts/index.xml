@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on minjun&#39;s note</title>
+    <link>http://minjun.note/posts/</link>
+    <description>Recent content in Posts on minjun&#39;s note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>kr</language>
+    <lastBuildDate>Wed, 17 Aug 2022 17:10:48 +0900</lastBuildDate><atom:link href="http://minjun.note/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>네트워크 기초 지식</title>
+      <link>http://minjun.note/posts/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B8%B0%EC%B4%88-%EC%A7%80%EC%8B%9D/</link>
+      <pubDate>Wed, 17 Aug 2022 17:10:48 +0900</pubDate>
+      
+      <guid>http://minjun.note/posts/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B8%B0%EC%B4%88-%EC%A7%80%EC%8B%9D/</guid>
+      <description>네트워크 주요 지식 0. 참고 아래 재생 목록을 정리한다.
+https://www.youtube.com/watch?v=k1gyh9BlOT8&amp;amp;list=PLXvgR_grOs1BFH-TuqFsfHqbh-gpMbFoy
+1. MAC, IP, Port 번호의 식별 MAC, IP, Port는 각 다음과 같은 레이어의 식별자이다. * DoD로 구분한 Layer * user mode ============================================ - Application kernel mode ============================================ - Transport: PORT - Network: IP H/W ============================================ - Access: MAC Transport
+Port가 식별자가 된다. Network
+Host에 대해서 IP가 식별자가 된다.
+Host: 네트워크에 연결된 컴퓨터, NIC 하나에 IP 주소를 여러개 바인딩 할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Second</title>
+      <link>http://minjun.note/posts/second/</link>
+      <pubDate>Tue, 16 Aug 2022 22:02:29 +0900</pubDate>
+      
+      <guid>http://minjun.note/posts/second/</guid>
+      <description>test2 테스트 페이지2
+태그: html, http
+카테고리: tech</description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>http://minjun.note/posts/first/</link>
+      <pubDate>Tue, 16 Aug 2022 22:00:46 +0900</pubDate>
+      
+      <guid>http://minjun.note/posts/first/</guid>
+      <description>test1 테스트 페이지1
+태그: html, css
+카테고리: tech</description>
+    </item>
+    
+  </channel>
+</rss>
