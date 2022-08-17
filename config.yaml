@@ -5,9 +5,9 @@ theme: 'hugo-PaperMod'
 
 menu:
   main:
-    - identifier: posts
-      name: Posts
-      url: posts/
+    - identifier: home
+      name: Home
+      url: /
       weight: 10
     - identifier: categories
       name: Categorie
