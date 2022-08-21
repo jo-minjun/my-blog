@@ -20,8 +20,8 @@ menu:
 
 params:
   homeInfoParams:
-    Title: 'test'
-    Content: Welcome to my blog
+    Title: '조민준의 기억 저장소'
+    Content: 공부, 생각, 잡담 등 기억하고 싶은 내용을 저장합니다.
 
   socialIcons:
     - name: github
@@ -31,5 +31,4 @@ params:
     linkFullImages: true
 
   ShowBreadCrumbs: true
-  ShowReadingTime: true
   ShowPostNavLinks: true
