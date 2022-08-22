@@ -1,6 +1,6 @@
 baseURL: 'https://jo-minjun.github.io/'
 languageCode: 'kr'
-title: "minjun's note"
+title: "minjun's memory repository"
 theme: 'hugo-PaperMod'
 
 menu:
@@ -20,7 +20,7 @@ menu:
 
 params:
   homeInfoParams:
-    Title: '조민준의 기억 저장소'
+    Title: "minjun's memory repository"
     Content: 공부, 생각, 잡담 등 기억하고 싶은 내용을 저장합니다.
 
   socialIcons:
