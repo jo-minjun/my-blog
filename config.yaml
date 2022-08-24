@@ -12,11 +12,11 @@ menu:
     - identifier: categories
       name: Categorie
       url: categories/
-      weight: 10
+      weight: 30
     - identifier: tags
       name: Tags
       url: tags/
-      weight: 10
+      weight: 50
 
 params:
   homeInfoParams:
