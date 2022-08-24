@@ -5,6 +5,16 @@ theme: 'hugo-PaperMod'
 
 menu:
   main:
+    - identifier: search
+      name:
+      url: search
+      weight: 1
+      pre:
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="23" y1="23" x2="16.65" y2="16.65"></line>
+        </svg>
     - identifier: home
       name: Home
       url: /
@@ -20,15 +30,35 @@ menu:
 
 params:
   homeInfoParams:
-    Title: "memory repository"
+    Title: 'memory repository'
     Content: 공부, 생각, 잡담 등 기억하고 싶은 내용을 저장합니다.
 
   socialIcons:
     - name: github
       url: 'https://github.com/jo-minjun'
 
+  # 사진 상세 보기
   cover:
     linkFullImages: true
 
+  # 게시물 상단 현재 디렉토리
   ShowBreadCrumbs: true
+  # 게시물 하단 네비게이션
   ShowPostNavLinks: true
+  # 공유 버튼
+  # 나중에 커스텀해서 해보기
+  # ShowShareButtons: true
+  # 코드 copy 버튼
+  ShowCodeCopyButtons: true
+
+  # 검색 옵션
+  # See https://fusejs.io/api/options.html
+  fuseOpts:
+    minMatchCharLength: 2
+    distance: 1000
+    threshold: 0.3
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
