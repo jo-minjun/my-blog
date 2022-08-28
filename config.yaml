@@ -37,6 +37,8 @@ params:
     - name: github
       url: 'https://github.com/jo-minjun'
 
+  comments: true
+
   # 사진 상세 보기
   cover:
     linkFullImages: true
@@ -62,3 +64,9 @@ params:
       - permalink
       - summary
       - content
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
