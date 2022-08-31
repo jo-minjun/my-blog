@@ -1,5 +1,3 @@
 ---
-title: 'network'
+title: 'Computer Science'
 ---
-
-## 네트워크 스터디

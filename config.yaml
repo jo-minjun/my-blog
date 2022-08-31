@@ -22,7 +22,15 @@ menu:
     - identifier: tags
       name: Tags
       url: tags/
+      weight: 40
+    - identifier: studies
+      name: Studies
+      url: studies/
       weight: 50
+    - identifier: notes
+      name: Notes
+      url: notes/
+      weight: 60
 
 params:
   homeInfoParams:

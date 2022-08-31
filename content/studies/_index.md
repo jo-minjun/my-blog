@@ -1,5 +1,5 @@
 ---
-title: 'CS'
+title: 'Studies'
 ---
 
-## Computer Science
+### 기억 아카이브
