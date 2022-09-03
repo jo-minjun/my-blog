@@ -35,8 +35,11 @@ menu:
 params:
   homeInfoParams:
     Title: 'memory repository'
-    Content: 
-      '공부, 생각, 잡담 등 기억하고 싶은 내용을 저장합니다. \nemail: alswns9288@gmail.com'
+    Content: >
+      공부, 생각, 잡담 등 기억하고 싶은 내용을 저장합니다.
+
+
+      email: alswns9288@gmail.com
 
   socialIcons:
     - name: github
@@ -52,9 +55,6 @@ params:
   ShowBreadCrumbs: true
   # 게시물 하단 네비게이션
   ShowPostNavLinks: true
-  # 공유 버튼
-  # 나중에 커스텀해서 해보기
-  # ShowShareButtons: true
   # 코드 copy 버튼
   ShowCodeCopyButtons: true
 
