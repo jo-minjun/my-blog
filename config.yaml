@@ -16,7 +16,7 @@ menu:
         <line x1="23" y1="23" x2="16.65" y2="16.65"></line>
         </svg>
     - identifier: categories
-      name: Categorie
+      name: Categories
       url: categories/
       weight: 30
     - identifier: tags
@@ -36,7 +36,7 @@ params:
   homeInfoParams:
     Title: 'memory repository'
     Content: >
-      공부, 생각, 잡담 등 기억하고 싶은 내용을 저장합니다.
+      공부, 생각 정리 등 기억하고 싶은 내용을 저장합니다.
 
 
       email: alswns9288@gmail.com
