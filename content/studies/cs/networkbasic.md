@@ -380,6 +380,7 @@ H/W
 L2 스위치는 MAC 주소(48bit)로 스위칭시킨다.
 
 ```
+                (multilayer switch)
  NIC  L2 Access   L2 Distribution    L2 Access    NIC
          |  (Up-link)        (Up-link)
          |---------------#---------------|
@@ -392,12 +393,15 @@ PC2------|               |               |
                          |
                          | (Up-link)
                          |
-                         @ 라우터 (gateway)
+                     (gateway)
+                         @
+                       라우터
+                         |
                        (방화벽)
 ```
 
 - L2 Access: End-Point가 네트워크에서 가장 처음 만나는 스위치
-- L2 Distribution: L2 Access와 만나는 스위치
+- L2 Distribution: L2 Access와 L3 라우터를 연결해주는 스위치
 - Up-link: 상위 계층 스위치로 연결되는 케이블
 
 ## 14. IP Header
