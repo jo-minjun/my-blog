@@ -1,10 +1,9 @@
 ---
-title: '객체 지향 설계와 스프링'
-author: ['조민준']
+title: "객체 지향 설계와 스프링"
+author: ["조민준"]
 date: 2022-07-01T19:42:48+09:00
 draft: false
-tags: ['spring']
-categories: ['study']
+tags: ["Spring", "OOP"]
 ShowToc: true
 ---
 

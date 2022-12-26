@@ -1,7 +1,7 @@
-baseURL: 'https://jo-minjun.github.io/'
-languageCode: 'kr'
+baseURL: "https://jo-minjun.github.io/"
+languageCode: "kr"
 title: "minjun's memory"
-theme: 'hugo-PaperMod'
+theme: "hugo-PaperMod"
 
 menu:
   main:
@@ -15,10 +15,6 @@ menu:
         <circle cx="11" cy="11" r="8"></circle>
         <line x1="23" y1="23" x2="16.65" y2="16.65"></line>
         </svg>
-    - identifier: categories
-      name: Categories
-      url: categories/
-      weight: 30
     - identifier: tags
       name: Tags
       url: tags/
@@ -34,7 +30,7 @@ menu:
 
 params:
   homeInfoParams:
-    Title: 'memory repository'
+    Title: "memory repository"
     Content: >
       공부, 생각 정리 등 기억하고 싶은 내용을 저장합니다.
 
@@ -43,7 +39,7 @@ params:
 
   socialIcons:
     - name: github
-      url: 'https://github.com/jo-minjun'
+      url: "https://github.com/jo-minjun"
 
   comments: true
 
