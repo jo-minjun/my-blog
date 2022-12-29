@@ -33,7 +33,7 @@ ShowToc: true
 
 ### 엔티티 Class
 
-![1](../1.png)
+![1](../msa-stack-quick-peek/1.png)
 
 ## 2. 프로젝트 scaffolding
 
@@ -122,7 +122,7 @@ ShowToc: true
 - **빠른 피드백 제공**
   - 클라이언트 개발자는 서버 개발자가 개발 완료 후 API를 제공할 때까지 기다리지 않고, API 문서와 Mock API를 이용하여 설계를 검토하고 검증해볼 수 있다.
 
-![2](../2.png)
+![2](../msa-stack-quick-peek/2.png)
 
 ### API-First 도구 - OAS (OpenApi Specification)
 
@@ -289,7 +289,7 @@ ShowToc: true
   ```
 
   - Stub을 생성하면 아래의 파일이 생성된다.
-    ![3](../3.png)
+    ![3](../msa-stack-quick-peek/3.png)
     - model에는 OAS에서 정의한 schema를 가진 DTO가 있다.
 
 - 클라이언트 SDK 빌드 및 배포
@@ -302,7 +302,7 @@ ShowToc: true
 ## 4. Controller 작성
 
 - 서버 코드 스켈레톤을 이용해서 controller를 구현한다.
-  ![4](../4.png)
+  ![4](../msa-stack-quick-peek/4.png)
 - SingerApi
 
   ```java
@@ -440,7 +440,7 @@ ShowToc: true
 
 ### 이벤트
 
-![5](../5.png)
+![5](../msa-stack-quick-peek/5.png)
 
 - 이미 일어난 정보에 대한 메세지이다.
 - immutable 하다.
@@ -451,7 +451,7 @@ ShowToc: true
 
 ### 커맨드
 
-![6](../6.png)
+![6](../msa-stack-quick-peek/6.png)
 
 - 수행할 작업에 대한 하나의 시스템에서 다른 시스템으로의 메세지
 - 미래에 발생할 사건의 트리거가 된다.
@@ -470,7 +470,7 @@ ShowToc: true
   1. producer 역할을 하는 서비스에 OUTBOX 테이블을 생성하고, 도메인 이벤트/메시지를 트랜잭션 범위안에서 OUTBOX 테이블에 insert한다.
   2. 별도의 MessageRelay가 주기적으로 OUTBOX 테이블에 있는 메세지를 발행한다.
      - MessageRelay는 polling publisher로 구현할 수 있다.
-       ![transactional-outbox-pattern.png](../7.png)
+       ![transactional-outbox-pattern.png](../msa-stack-quick-peek/7.png)
 - 데이터베이스 트랜잭션이 커밋된 경우에만 MessageRelay를 통해서 메시지를 발행한다.
 - MessageRelay를 통하기 때문에 메세지 발행에 시차는 생기지만, Eventual Consistency를 유지한다.
 
@@ -483,7 +483,7 @@ ShowToc: true
   3. 테이블에서 조회된다면 메세지를 무시한다.
   4. 조회되지 않는 메세지면 PROCESSED_MESSAGE에 저장하고 처리한다.
   - (메세지 식별자에 unique 제약조건을 걸어서 구분할 수도 있다.)
-    ![idempotent-receiver.png](../8.png)
+    ![idempotent-receiver.png](../msa-stack-quick-peek/8.png)
 
 ### Kafka 코드
 
@@ -642,7 +642,7 @@ ShowToc: true
 
 ### 전체 흐름
 
-![messaging-sequence.png](../9.png)
+![messaging-sequence.png](../msa-stack-quick-peek/9.png)
 
 ## 6. CI/CD
 
@@ -699,7 +699,7 @@ ShowToc: true
 
 ### 빌드 및 배포 과정
 
-![10](../10.png)
+![10](../msa-stack-quick-peek/10.png)
 
 1. Start
 2. Init
@@ -723,7 +723,7 @@ ShowToc: true
    - 슬랙에 빌드 완료 메세지를 보낸다.
 9. End
 
-![11](../11.png)
+![11](../msa-stack-quick-peek/11.png)
 
 1. Jenkins 과정을 거친 후 APP DIFF 버튼을 눌러, helm values 변경 사항을 확인한다.
 2. 변경 사항에 이상이 없으면 SYNC 버튼을 누른다.
@@ -737,7 +737,7 @@ ShowToc: true
    /{서비스 이름으로 검색}
    ```
 
-   ![12](../12.png)
+   ![12](../msa-stack-quick-peek/12.png)
 
    - 상단 Context에서 현재 환경을 확인할 수 있다.
    - 새로운 pod가 실행된 후 완료되면 기존 pod를 교체한다.
