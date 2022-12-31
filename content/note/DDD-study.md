@@ -11,17 +11,17 @@ ShowToc: true
 
 - 도메인 주도 개발 시작하기
 
-[도메인 주도 개발 시작하기 - YES24](http://www.yes24.com/Product/Goods/108431347)
+  - [도메인 주도 개발 시작하기 - YES24](http://www.yes24.com/Product/Goods/108431347)
 
 - 핵사고날 아키텍처
 
-[Hexagonal Architecture with Java and Spring](https://reflectoring.io/spring-hexagonal/)
+  - [Hexagonal Architecture with Java and Spring](https://reflectoring.io/spring-hexagonal/)
 
-[https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+  - [https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
 
 - 예제 프로젝트
 
-[https://github.com/jo-minjun/order-delivery-project](https://github.com/jo-minjun/order-delivery-project)
+  - [https://github.com/jo-minjun/order-delivery-project](https://github.com/jo-minjun/order-delivery-project)
 
 ## 1. 도메인이란 무엇일까?
 
@@ -50,7 +50,7 @@ ShowToc: true
 
 - 복잡도 관리
   - 시간 경과에 따라 코드 라인이 늘어나고, 변경 비용이 증가한다.
-    ![[https://dreamix.eu/blog/java/why-good-clean-software-architecture-matters](https://dreamix.eu/blog/java/why-good-clean-software-architecture-matters)](https://dreamix.eu/blog/wp-content/uploads/2020/08/blogAcho2.png)
+    ![1](../DDD-study/1.png)
     [https://dreamix.eu/blog/java/why-good-clean-software-architecture-matters](https://dreamix.eu/blog/java/why-good-clean-software-architecture-matters)
 - 개발자는 특정 도메인의 전문가보다 도메인에 대한 전문성이 떨어진다.
   - 공인 중개사와 개발자
@@ -85,7 +85,7 @@ ShowToc: true
 - **도메인 모델**
   - 특정 도메인을 개념적으로 표현한 것
   - 도메인에 대한 이해도에 따라 도메인 모델도 변경된다.
-    ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fe98397-c546-457c-8961-909aab4bde0c/1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220801%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220801T143718Z&X-Amz-Expires=86400&X-Amz-Signature=340191c2771a81215ae3bef83d50b530b5a1c90809ecc24bfdd36046ce444427&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%221.png%22&x-id=GetObject](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fe98397-c546-457c-8961-909aab4bde0c/1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220801%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220801T143718Z&X-Amz-Expires=86400&X-Amz-Signature=340191c2771a81215ae3bef83d50b530b5a1c90809ecc24bfdd36046ce444427&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%221.png%22&x-id=GetObject)
+    ![2](../DDD-study/2.png)
 - 위와 같은 서브 도메인을 하나의 도메인으로 표현하기는 불가능에 가깝다.
 - 서브 도메인마다 같은 대상이라도 지칭하는 용어가 다를 수 있다.
 
@@ -126,7 +126,7 @@ ShowToc: true
       - 상품 컨텍스트에서 재고와 카탈로그를 구현한다.
 - 이상적으로는 바운디드 컨텍스트와 하위 도메인이 1대1로 대응되는 것이 좋다.
 - 하지만 팀 상황이나 유비쿼터스 언어가 명확하게 정의되지 않아 1대1로 대응되지 않는 경우도 있다.
-  ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/51c2c84d-2c5e-4707-a7d6-911fb550b8b1/40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220802%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220802T133824Z&X-Amz-Expires=86400&X-Amz-Signature=d50e1f2774d66c43b2a326ba75a463f1c3a2c4c46bbdb64ba722be63c45e92a1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2240.png%22&x-id=GetObject](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/51c2c84d-2c5e-4707-a7d6-911fb550b8b1/40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220802%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220802T133824Z&X-Amz-Expires=86400&X-Amz-Signature=d50e1f2774d66c43b2a326ba75a463f1c3a2c4c46bbdb64ba722be63c45e92a1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2240.png%22&x-id=GetObject)
+  ![3](../DDD-study/3.png)
 
 ### 바운디드 컨텍스트 간 관계
 
@@ -137,7 +137,7 @@ ShowToc: true
 - **고객/공급자**
   - 가장 흔한 관계이다.
   - 한쪽에서 **API를 제공(상류)**하고 다른쪽에서 **API를 호출(하류)**한다.
-    ![카탈로그 바운디드 컨텍스트는 추천 바운디드 컨텍스트에 의존한다.](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8f9c8822-1071-4053-b528-8d4eb23a062f/54.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220804%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220804T141841Z&X-Amz-Expires=86400&X-Amz-Signature=14cf7c755024975f777ad1c80685679e8d2f24c7eeb5a01141c79e0bca14f63a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2254.png%22&x-id=GetObject)
+    ![카탈로그 바운디드 컨텍스트는 추천 바운디드 컨텍스트에 의존한다.](../DDD-study/4.png)
     카탈로그 바운디드 컨텍스트는 추천 바운디드 컨텍스트에 의존한다.
 - **공유 커널**
   - 여러 바운디드 컨텍스트가 **같은 모델을 공유**하는 관계이다.
@@ -153,12 +153,12 @@ ShowToc: true
 
 - 특정 바운디드 컨텍스트에 과도하게 집중하면 전체적인 바운디드 컨텍스트 간의 관계를 인식하지 못할 수 있다.
 - 도메인을 더 잘 이해하거나 컨텍스트 간 관계가 바뀌면 컨텍스트 맵도 바뀐다.
-  ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/40deb960-9c9a-4129-a315-f7d4e1689f34/58.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220802%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220802T140726Z&X-Amz-Expires=86400&X-Amz-Signature=781e7fe521068c877965763921850b349b02fdd643947b67a2e9b259a2290626&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2258.png%22&x-id=GetObject](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/40deb960-9c9a-4129-a315-f7d4e1689f34/58.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220802%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220802T140726Z&X-Amz-Expires=86400&X-Amz-Signature=781e7fe521068c877965763921850b349b02fdd643947b67a2e9b259a2290626&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%2258.png%22&x-id=GetObject)
+  ![5](../DDD-study/5.png)
 
 ## 5. 핵사고날 아키텍처
 
 - 예제 프로젝트에 핵사고날 아키텍처를 적용했다.
-  ![[https://reflectoring.io/spring-hexagonal/](https://reflectoring.io/spring-hexagonal/)](https://reflectoring.io/images/posts/spring-hexagonal/hexagonal-architecture_hu6764515d7030d45af6f7f498c79e292b_50897_956x0_resize_box_3.png)
+  ![6](../DDD-study/6.png)
   [https://reflectoring.io/spring-hexagonal/](https://reflectoring.io/spring-hexagonal/)
 
 ```java
@@ -189,23 +189,13 @@ ShowToc: true
 
 ### 도메인 영역의 주요 구성 요소
 
-| 요소 | 설명 |
-| ---- | ---- |
-
-| 엔티티
-ENTITY | 고유의 식별자를 갖는 객체로 자신의 라이프 사이클을 갖는다.
-도메인의 고유한 개념을 표현한다.
-도메인 모델의 데이터를 포함하며 해당 데이터와 관련된 기능을 함께 제공한다. |
-| 밸류
-VALUE | 고유의 식별자를 갖지 않는 객체다.
-엔티티의 속성으로 사용할 뿐만 아니라 다른 밸류 타입의 속성으로도 사용할 수 있다. |
-| 애그리거트
-AGGREGATE | 애그리거트는 연관된 엔티티와 밸류 객체를 개념적으로 하나로 묶은 것이다. |
-| 리포지터리
-REPOSITORY | 도메인 모델의 영속성을 처리한다. |
-| 도메인 서비스
-DOMAIN SERVICE | 특정 엔티티에 속하지 않은 도메인 로직을 제공한다.
-도메인 로직이 여러 엔티티와 밸류를 필요로 하면 도메인 서비스에서 로직을 구현한다. |
+| 요소                           | 설명                                                                                                                                                                   |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 엔티티 (ENTITY)                | 고유의 식별자를 갖는 객체로 자신의 라이프 사이클을 갖는다. 도메인의 고유한 개념을 표현한다. 도메인 모델의 데이터를 포함하며 해당 데이터와 관련된 기능을 함께 제공한다. |
+| 밸류 (VALUE)                   | 고유의 식별자를 갖지 않는 객체다. 엔티티의 속성으로 사용할 뿐만 아니라 다른 밸류 타입의 속성으로도 사용할 수 있다.                                                     |
+| 애그리거트 (AGGREGATE)         | 애그리거트는 연관된 엔티티와 밸류 객체를 개념적으로 하나로 묶은 것이다.                                                                                                |
+| 리포지터리 (REPOSITORY)        | 도메인 모델의 영속성을 처리한다.                                                                                                                                       |
+| 도메인 서비스 (DOMAIN SERVICE) | 특정 엔티티에 속하지 않은 도메인 로직을 제공한다. 도메인 로직이 여러 엔티티와 밸류를 필요로 하면 도메인 서비스에서 로직을 구현한다.                                    |
 
 ### 엔티티 & 밸류
 
@@ -492,7 +482,7 @@ public class DiscountCalculationService {
 
 - 이벤트는 **과거에 벌어진 어떤 것**을 의미하며, **상태가 변경**됐다는 것을 의미한다.
 - 이벤트는 다음과 같이 네 개의 구성요소를 가진다.
-  ![68.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/18c5b9f6-7eaf-4d59-bdc1-c48d4b841c9a/68.png)
+  ![7.png](../DDD-study/7.png)
 
   - 이벤트
     - 이벤트 종류, 발생 시간, 이벤트 관련 정보
@@ -546,6 +536,6 @@ public class DiscountCalculationService {
 - 위와 같은 방법이 아닌, **메시징 시스템을 이용한 방법**도 가능하다.
   - 이벤트 저장소를 이용한 메시징 (**Transactional Outbox Pattern**)
   - 이벤트 발행 서비스
-    ![transactional-outbox-pattern.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70ca4a0b-2a56-47f9-8c6c-c9c7ba585a76/transactional-outbox-pattern.png)
+    ![transactional-outbox-pattern.png](../DDD-study/8.png)
   - 이벤트 소비 서비스
-    ![idempotent-receiver.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5151366-c200-4045-bbeb-47d2a485c2fb/idempotent-receiver.png)
+    ![idempotent-receiver.png](../DDD-study/9.png)
