@@ -3,6 +3,7 @@ title: "DDD 핵심 정리"
 author: ["조민준"]
 date: 2022-12-30T17:10:50+09:00
 draft: false
+categories: ["Dev"]
 tags: ["DDD"]
 ShowToc: true
 ---

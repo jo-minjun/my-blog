@@ -3,6 +3,7 @@ title: "네트워크 기초 지식"
 author: ["조민준"]
 date: 2022-08-17T17:10:48+09:00
 draft: false
+categories: ["Network/Security"]
 tags: ["Network"]
 ShowToc: true
 ---

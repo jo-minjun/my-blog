@@ -3,6 +3,7 @@ title: "MSA 개발 스택 빠르게 훑어보기"
 author: ["조민준"]
 date: 2022-12-28T17:10:30+09:00
 draft: false
+categories: ["Dev"]
 tags: ["MSA", "API-First", "CI/CD", "Message-Queue"]
 ShowToc: true
 ---
