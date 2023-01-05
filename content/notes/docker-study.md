@@ -3,7 +3,7 @@ title: "Docker 스터디"
 author: ["조민준"]
 date: 2023-01-04T23:51:30+09:00
 draft: false
-categories: ["Ops"]
+categories: ["DevOps"]
 tags: ["Docker"]
 ShowToc: true
 ---
