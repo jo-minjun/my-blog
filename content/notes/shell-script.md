@@ -10,6 +10,8 @@ ShowToc: true
 
 ## Shell Script
 
+- [쉘 스크립트로 만든 UP-DOWN 게임](https://github.com/jo-minjun/shell-script-up-down-game)
+
 ### Shell이란
 
 운영체제에서 커널과 사용자 사이를 이어주는 역할을 하는 명령어 해석기이다.
