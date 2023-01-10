@@ -4,7 +4,7 @@ author: ["조민준"]
 date: 2023-01-09T23:51:30+09:00
 draft: false
 categories: ["DevOps"]
-tags: ["K8S"]
+tags: ["Kubernetes"]
 ShowToc: true
 ---
 
