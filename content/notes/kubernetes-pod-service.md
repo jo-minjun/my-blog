@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes: pod와 service"
 author: ["조민준"]
-date: 2023-01-10T21:51:30+09:00
+date: 2023-01-11T23:51:30+09:00
 draft: false
 categories: ["DevOps"]
 tags: ["Kubernetes"]
