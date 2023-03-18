@@ -34,16 +34,17 @@ menu:
 
 params:
   homeInfoParams:
-    Title: "memory repository"
-    Content: >
-      공부, 생각 정리 등 기억하고 싶은 내용을 저장합니다.
-
-
-      email: alswns9288@gmail.com
+    Title: "민준의 블로그"
+    Content: |
+      - 산업기능요원으로 근무하고 있는 2년차 백엔드 개발자 조민준입니다.
 
   socialIcons:
+    - name: email
+      url: "mailto:alswns9288@gmail.com"
     - name: github
       url: "https://github.com/jo-minjun"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/minjun-jo-8007a0238"
     - name: instagram
       url: "https://instagram.com/j0_minjun?igshid=MjkzY2Y1YTY="
 
