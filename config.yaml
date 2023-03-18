@@ -27,6 +27,10 @@ menu:
       name: Notes
       url: notes/
       weight: 60
+    - identifier: etc
+      name: 끄적끄적
+      url: etc/
+      weight: 80
 
 params:
   homeInfoParams:
