@@ -19,12 +19,17 @@
   - `brew install hugo`
 
 ```shell
-hugo new {filename}.md
+hugo new --kind default {filename}.md
 
-# cat {filename}.md
-title: "examle"
-date: 2023-03-18T22:49:55+09:00
-draft: true
+# cat {filename-hello}.md
+---
+title: "Filename hello"
+author: ["조민준"]
+date: "yyyy-MM-dd'T'HH:mm:ss+09:00"
+draft: false
+categories: []
+tags: []
+ShowToc: true
 ---
 ```
 
