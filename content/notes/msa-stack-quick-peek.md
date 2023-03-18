@@ -6,7 +6,6 @@ draft: false
 categories: ["Dev"]
 tags: ["MSA", "API-First", "CI/CD", "Message-Queue"]
 ShowToc: true
-weight: 1
 ---
 
 ## 1. 요구사항

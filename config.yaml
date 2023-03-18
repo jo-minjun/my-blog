@@ -3,6 +3,8 @@ languageCode: "kr"
 title: "minjun's memory"
 theme: "hugo-PaperMod"
 
+googleAnalytics: G-ZW1ZBXB1FD
+
 menu:
   main:
     - identifier: search
