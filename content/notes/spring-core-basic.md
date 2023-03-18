@@ -88,7 +88,7 @@ ShowToc: true
 
 **운전자 - 자동차 예시**
 
-![운전자-자동차_예시.png](./spring-core-basic/0.png)
+![운전자-자동차_예시.png](/images/notes/spring-core-basic/0.png)
 
 - 자동차의 역할(인터페이스)을 3개의 자동차로 구현함
 - 운전자는 K3를 타다가 아반떼로 차를 변경할 수 있음
@@ -129,7 +129,7 @@ ShowToc: true
 
 ### 자바 언어의 다형성
 
-![오버라이딩.png](./spring-core-basic/1.png)
+![오버라이딩.png](/images/notes/spring-core-basic/1.png)
 
 - 오버라이딩을 떠올려보자
 - 오버라이딩된 메서드가 실행

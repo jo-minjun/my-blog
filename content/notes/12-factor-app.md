@@ -28,7 +28,7 @@ ShowToc: true
 
 코드베이스는 모든 배포에 사용되지만 각 배포는 다른 버전이 사용될 수 있습니다.
 
-![codebase](../12-factor-app/codebase.png)
+![codebase](/images/notes/12-factor-app/codebase.png)
 
 ## 2. Dependencies
 
@@ -38,7 +38,7 @@ ShowToc: true
 
 대부분의 프로그래밍 언어는 패키징 시스템을 제공하기 때문에 새로 설정을 해야할 때는 언어와 패키지 매니저만 설치하면 됩니다.
 
-![dependencies](../12-factor-app/dependencies.png)
+![dependencies](/images/notes/12-factor-app/dependencies.png)
 
 ## 3. Config
 
@@ -50,7 +50,7 @@ ShowToc: true
 - Amazon S3 또는 트위터와 같은 외부 서비스에 대한 인증 정보
 - 배포 환경 호스트 이름과 같은 값
 
-![config](../12-factor-app/config.png)
+![config](/images/notes/12-factor-app/config.png)
 
 ## 4. Backing services
 
@@ -60,7 +60,7 @@ Backing 서비스는 데이터베이스와, 메시징, 메일 서비스 등 통�
 
 12 factor app은 Backing 서비스를 모두 리소스로 취급하고, 설정에서 값을 읽어서 처리하여 느슨하게 연결합니다.
 
-![backing-service](../12-factor-app/backing-service.png)
+![backing-service](/images/notes/12-factor-app/backing-service.png)
 
 ## 5. Build, release, run
 
@@ -82,7 +82,7 @@ Backing 서비스는 데이터베이스와, 메시징, 메일 서비스 등 통�
 
 상태는 데이터베이스와 같은 상태 저장 서비스에 저장해야 하며, 애플리케이션은 Stateless하게 유지해야 합니다.
 
-![processes](../12-factor-app/processes.png)
+![processes](/images/notes/12-factor-app/processes.png)
 
 ## 7. Port binding
 
@@ -124,7 +124,7 @@ Local에서는 H2 database를 사용하고 상용에서는 MySQL을 사용하는
 
 애플리케이션은 언제든지 생성되고 삭제될 수 있습니다. 따라서 이벤트는 별도 저장소에 보관되는 것이 좋습니다.
 
-![logs](../12-factor-app/logs.png)
+![logs](/images/notes/12-factor-app/logs.png)
 
 ## 12. Admin processes
 

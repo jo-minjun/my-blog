@@ -55,7 +55,7 @@ publisher은 메세지를 **\*Topic**을 통해서 분류하여 관리하고, re
 
 즉 **\*kafka cluster**를 중심으로 producer가 push하고, consumer가 메세지를 pull하는 구조이다.
 
-![pub-sub](../kafka/pub-sub.png)
+![pub-sub](/images/notes/kafka/pub-sub.png)
 
 > **\*kafka cluster:**
 > kafka 서버 (broker)로 이루어진 클러스터를 말한다.
@@ -109,13 +109,13 @@ producer는 메세지를 순차적으로 전달하고 디스크에 순차적으�
 따라서 offset은 partition 내에서 메세지의 위치를 표시하는 유니크한 숫자이다.
 consumer는 자신이 어디까지 메세지를 처리했는지 offset을 이용해서 관리한다.
 
-![offset](../kafka/offset.png)
+![offset](/images/notes/kafka/offset.png)
 
 ## 4. zookeeper 란?
 
 zookeeper는 분산 애플리케이션이 안정적으로 서비스될 수 있도록 각 애플리케이션의 구성 정보를 중앙 집중시키고, 네이밍, 동기화 등의 서비스를 지원한다.
 
-![zookeeper](../kafka/zookeeper.png)
+![zookeeper](/images/notes/kafka/zookeeper.png)
 
 > zookeeper 여러개를 하나의 클러스터로 구성하고, 각각의 zookeeper 서버는 클라이언트 애플리케이션과 커넥션을 유지하며, 상태 정보를 공유한다.
 
@@ -123,7 +123,7 @@ zookeeper는 분산 애플리케이션이 안정적으로 서비스될 수 있�
 
 znode는 key-value 형태이며, 자식 노드를 가지고 있는 계층형 구조로 구성되어 있다.
 
-![znode](../kafka/znode.png)
+![znode](/images/notes/kafka/znode.png)
 
 zookeeper는 클러스터로 구성될 시 몇개의 서버가 다운되더라도 과반수 구조에 의해 서비스가 유지된다.
 

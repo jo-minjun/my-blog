@@ -12,7 +12,7 @@ ShowToc: true
 
 ### MAC, IP, Port는 각 다음과 같은 레이어의 식별자이다.
 
-```
+```shell
 * DoD로 구분한 Layer *
 
 user mode
@@ -59,7 +59,7 @@ Network는 다음과 같이 두 가지로 나뉜다.
 
 **Network**는 **Router(L3 Switch)와 DNS의 집합체**이다.
 
-```
+```shell
 (스위칭 비용 증가)
 
 user mode
@@ -107,7 +107,7 @@ IPv4의 32bit는 다음과 같이 이루어져 있다.
   - 121.123.223.10
 - 크게 두 부분으로 나뉜다.
   - Net ID, Host ID
-  ```
+  ```shell
   Net ID   Host ID
   ----------- --
   121.123.223.10
@@ -138,7 +138,7 @@ Port는 관점에 따라 여러 의미를 가진다.
 
 여기서는 개발자 관점에서 Process 식별자를 알아본다.
 
-```
+```shell
 user mode
 ============================================
 - Process
@@ -182,7 +182,7 @@ Network는 라우터와 DNS의 집합이다.
 
 ## 6. 네트워크 데이터 단위
 
-```
+```shell
 user mode
 ============================================
 - Application (Socket 수준)
@@ -212,7 +212,7 @@ H/W
 
 ## 7. 네트워크 인터페이스 선택 원리와 기준
 
-```
+```shell
 user mode
 ============================================
 - HTTP (L7)
@@ -308,7 +308,7 @@ H/W
 
 - 주의) 이 내용은 명확한 구분은 아니다.
 
-```
+```shell
 user mode
 ============================================
 - HTTP
@@ -340,7 +340,7 @@ LAN과 WAN은 흔히 범위의 차이로 구분한다.
 
 ## 12. 패킷의 생성 원리와 캡슐화
 
-```
+```shell
 user mode
 ============================================
 - HTTP
@@ -379,7 +379,7 @@ H/W
 
 L2 스위치는 MAC 주소(48bit)로 스위칭시킨다.
 
-```
+```shell
                 (multilayer switch)
  NIC  L2 Access   L2 Distribution    L2 Access    NIC
          |  (Up-link)        (Up-link)
@@ -406,7 +406,7 @@ PC2------|               |               |
 
 ## 14. IP Header
 
-![0.png](../networkbasic/0.png)
+![0.png](/images/notes/networkbasic/0.png)
 
 위에서 언급한 것처럼 IP의 헤더는 20바이트이다. (+ @ Opitonal)
 
@@ -435,14 +435,14 @@ Proxy는 대리자 역할을 한다.
 
 <Proxy 미적용>
 
-```
+```shell
 										    HTTPS TCP/IP
 PC1 (1.1.1.1)--------------Internet--------------------SERVER(9.9.9.9)
 ```
 
 <Proxy 적용>
 
-```
+```shell
 PC1 (1.1.1.1)                                          SERVER(9.9.9.9)
   |                                                        |
   |                                                        |
@@ -454,7 +454,7 @@ PC2 (2.2.2.2)---------------- Internet---------------------|
 
 <PC2의 역할>
 
-```
+```shell
 user mode    |          PC2
 ============================================
 - HTTP       |   Proxy 역할을 하는
@@ -518,7 +518,7 @@ TCP는 연결지향 프로토콜이다.
 
 우선 아래 TCP 헤더를 보자
 
-![1.png](../networkbasic/1.png)
+![1.png](/images/notes/networkbasic/1.png)
 
 - 출발지/목적지 Port 번호가 가장위에 위치한다.
 - Sequence Number: 32bit → 4GB (2^32), Segment의 순서
@@ -532,7 +532,7 @@ TCP는 연결지향 프로토콜이다.
 
 ## 19. Unicast, Broadcast, Multicast
 
-```
+```shell
  NIC  L2 Access   L2 Distribution    L2 Access    NIC
          |  (Up-link)        (Up-link)
          |---------------#---------------|
@@ -637,7 +637,7 @@ TCP/IP 통신을 할 때의 MAC 주소의 변화
 
 ## 23. MTU와 Packet 단편화
 
-![2.png](../networkbasic/2.png)
+![2.png](/images/notes/networkbasic/2.png)
 
 - 위 그림에서 2번째 줄(Identification, Fragment Offset)이 단편화 관련 부분이다.
 - MTU는 1500이 기본값인 경우가 많다.
@@ -645,7 +645,7 @@ TCP/IP 통신을 할 때의 MAC 주소의 변화
 
 아래와 같은 경우에는 단편화가 어떻게 이루어 질까?
 
-```
+```shell
 MTU:1500     MTU:1500       MTU:1400       MTU:1500  MTU:1500
 PC1 ---|---#-----R1-------------R2-------------R3-----SERVER
 ```

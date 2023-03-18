@@ -39,7 +39,7 @@ ShowToc: true
 
 ## Overview
 
-![1](../introduce-kubernetes/1.png)
+![1](/images/notes/introduce-kubernetes/1.png)
 
 - 서버 한대는 Master, 나머지 서버는 Node가 된다.
 
@@ -62,7 +62,7 @@ ShowToc: true
 
 ## Components
 
-![2](../introduce-kubernetes/2.png)
+![2](/images/notes/introduce-kubernetes/2.png)
 
 - master 노드
   - kube-apiserver
@@ -103,7 +103,7 @@ ShowToc: true
 
 - 강의에서 소개된 환경이 아닌 minikube를 사용한다.
 
-```bash
+```shell
 minikube start \
   --driver='docker' \
   --kubernetes-version='stable' \

@@ -51,7 +51,7 @@ ShowToc: true
 
 - 복잡도 관리
   - 시간 경과에 따라 코드 라인이 늘어나고, 변경 비용이 증가한다.
-    ![1](../DDD-study/1.png)
+    ![1](/images/notes/DDD-study/1.png)
     [https://dreamix.eu/blog/java/why-good-clean-software-architecture-matters](https://dreamix.eu/blog/java/why-good-clean-software-architecture-matters)
 - 개발자는 특정 도메인의 전문가보다 도메인에 대한 전문성이 떨어진다.
   - 공인 중개사와 개발자
@@ -86,7 +86,7 @@ ShowToc: true
 - **도메인 모델**
   - 특정 도메인을 개념적으로 표현한 것
   - 도메인에 대한 이해도에 따라 도메인 모델도 변경된다.
-    ![2](../DDD-study/2.png)
+    ![2](/images/notes/DDD-study/2.png)
 - 위와 같은 서브 도메인을 하나의 도메인으로 표현하기는 불가능에 가깝다.
 - 서브 도메인마다 같은 대상이라도 지칭하는 용어가 다를 수 있다.
 
@@ -127,7 +127,7 @@ ShowToc: true
       - 상품 컨텍스트에서 재고와 카탈로그를 구현한다.
 - 이상적으로는 바운디드 컨텍스트와 하위 도메인이 1대1로 대응되는 것이 좋다.
 - 하지만 팀 상황이나 유비쿼터스 언어가 명확하게 정의되지 않아 1대1로 대응되지 않는 경우도 있다.
-  ![3](../DDD-study/3.png)
+  ![3](/images/notes/DDD-study/3.png)
 
 ### 바운디드 컨텍스트 간 관계
 
@@ -138,7 +138,7 @@ ShowToc: true
 - **고객/공급자**
   - 가장 흔한 관계이다.
   - 한쪽에서 **API를 제공(상류)**하고 다른쪽에서 **API를 호출(하류)**한다.
-    ![카탈로그 바운디드 컨텍스트는 추천 바운디드 컨텍스트에 의존한다.](../DDD-study/4.png)
+    ![카탈로그 바운디드 컨텍스트는 추천 바운디드 컨텍스트에 의존한다.](/images/notes/DDD-study/4.png)
     카탈로그 바운디드 컨텍스트는 추천 바운디드 컨텍스트에 의존한다.
 - **공유 커널**
   - 여러 바운디드 컨텍스트가 **같은 모델을 공유**하는 관계이다.
@@ -154,15 +154,15 @@ ShowToc: true
 
 - 특정 바운디드 컨텍스트에 과도하게 집중하면 전체적인 바운디드 컨텍스트 간의 관계를 인식하지 못할 수 있다.
 - 도메인을 더 잘 이해하거나 컨텍스트 간 관계가 바뀌면 컨텍스트 맵도 바뀐다.
-  ![5](../DDD-study/5.png)
+  ![5](/images/notes/DDD-study/5.png)
 
 ## 5. 핵사고날 아키텍처
 
 - 예제 프로젝트에 핵사고날 아키텍처를 적용했다.
-  ![6](../DDD-study/6.png)
+  ![6](/images/notes/DDD-study/6.png)
   [https://reflectoring.io/spring-hexagonal/](https://reflectoring.io/spring-hexagonal/)
 
-```java
+```shell
 └── xxx
     ├── adapter
     │   ├── in
@@ -328,11 +328,11 @@ public class OrderLine {
   ... // 애너테이션
   public class Delivery {
 
-  	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-  	@Embedded
+    @Embedded
     private Address address;
 
     private String phoneNumber;
@@ -393,11 +393,11 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 public class DiscountCalculationService {
 
 	public Money calculateDiscountAmounts(List<OrderLine> orderLines,
-																				List<Coupon> coupons,
-																				MemberGrade grade) {
+                                        List<Coupon> coupons,
+                                        MemberGrade grade) {
 		Money couponDiscount = coupons.stream()
-												.map(coupon -> calculateDiscount(coupon))
-												.reduce(new Money(0), (v1, v2) -> v1.add(v2));
+                        .map(coupon -> calculateDiscount(coupon))
+                        .reduce(new Money(0), (v1, v2) -> v1.add(v2));
 
 		Money membershipDiscount = calculateDiscount(orderer.getMember().getGrade());
 
@@ -459,19 +459,19 @@ public class DiscountCalculationService {
   @Transactional
   public class OrderService implements OrderUsecase {
 
-  	private final PaymentPort paymentPort;
+    private final PaymentPort paymentPort;
 
-  	@Override
+    @Override
     public void cancelOrder(Long orderId) {
       final Order order = findOrder(orderId);
 
-  		// Payment 도메인 로직
+      // Payment 도메인 로직
       final Boolean responseFromPayment = paymentPort.cancelPayment(order.getPaymentId());
       if (!responseFromPayment) {
         throw new RuntimeException("결제 취소 실패");
       }
 
-  		// Order 도메인 로직
+      // Order 도메인 로직
       order.cancelOrder();
     }
   }
@@ -483,7 +483,7 @@ public class DiscountCalculationService {
 
 - 이벤트는 **과거에 벌어진 어떤 것**을 의미하며, **상태가 변경**됐다는 것을 의미한다.
 - 이벤트는 다음과 같이 네 개의 구성요소를 가진다.
-  ![7.png](../DDD-study/7.png)
+  ![7.png](/images/notes/DDD-study/7.png)
 
   - 이벤트
     - 이벤트 종류, 발생 시간, 이벤트 관련 정보
@@ -537,6 +537,6 @@ public class DiscountCalculationService {
 - 위와 같은 방법이 아닌, **메시징 시스템을 이용한 방법**도 가능하다.
   - 이벤트 저장소를 이용한 메시징 (**Transactional Outbox Pattern**)
   - 이벤트 발행 서비스
-    ![transactional-outbox-pattern.png](../DDD-study/8.png)
+    ![transactional-outbox-pattern.png](/images/notes/DDD-study/8.png)
   - 이벤트 소비 서비스
-    ![idempotent-receiver.png](../DDD-study/9.png)
+    ![idempotent-receiver.png](/images/notes/DDD-study/9.png)

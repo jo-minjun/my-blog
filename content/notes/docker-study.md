@@ -17,7 +17,7 @@ ShowToc: true
   - 협업 시 각 로컬에 개발환경을 설치하지 않아도 된다.
   - 서버 관리에 편리하다.
 
-![1](../docker-study/1.svg)
+![1](/images/notes/docker-study/1.svg)
 
 [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
 

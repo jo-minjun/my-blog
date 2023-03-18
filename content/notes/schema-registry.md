@@ -24,7 +24,7 @@ schema registry는 이를 보완하기 위해 고안되었다.
 
 Confluent Schema registry는 Avro, Json, Protobuf 등의 schema 정보의 history를 subjects를 통해 관리하며, REST API를 통해 **compatibility settings**을 결정하고 현재 버전과 이전 버전간의 호환성을 지원한다.
 
-![schema-registry-kafka.png](../schema-registry/schema-registry-kafka.png)
+![schema-registry-kafka.png](/images/notes/schema-registry/schema-registry-kafka.png)
 
 Schema registry는 kafka boroker와 독립적으로 존재하며, producer와 consumer는 kafka broker와 읽고 쓰는 동안 Schema registry와 동작하며 데이터 모델을 확인할 수 있다.
 
@@ -36,7 +36,7 @@ Subject는 Schema registry에 schema가 등록된 이름이며, 여러 버전의
 
 따라서 Subject를 통해 계속해서 Schema의 정보를 관리할 수 있고, 새로운 버전의 Schema ID와 버전을 확인할 수 있다.
 
-![schema registry.png](../schema-registry/schema-subject-topic.png)
+![schema registry.png](/images/notes/schema-registry/schema-subject-topic.png)
 
 - kafka topic은 메세지가 포함되어 있으며, 각 메세지는 key - value 쌍으로 되어있으며
   메세지의 key와 value는 Avro, Json, Protobuf 등으로 직렬화할 수 있다.
@@ -84,7 +84,7 @@ v1은 API의 버전이고, json은 직렬화 포맷이다.
 
 모든 API endpoint는 다음과 같은 error message 포맷을 사용한다.
 
-```json
+```shell
 HTTP/1.1 422 Unprocessable Entity
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -122,7 +122,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -152,7 +152,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -186,7 +186,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -223,7 +223,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -254,7 +254,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -289,7 +289,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -328,7 +328,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -367,7 +367,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -402,7 +402,7 @@ schema (string) - schema의 내용
 
 **Example request:**
 
-```json
+```shell
 POST /subjects/test/versions HTTP/1.1
 Host: schemaregistry.example.com
 Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json
@@ -437,7 +437,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -470,7 +470,7 @@ schema (string) - schema의 내용
 
 **Example request:**
 
-```json
+```shell
 POST /subjects/test HTTP/1.1
 Host: schemaregistry.example.com
 Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json
@@ -497,7 +497,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -584,7 +584,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -625,7 +625,7 @@ is_compatible (boolean) - 호환가능 여부
 
 **Example request:**
 
-```json
+```shell
 POST /compatibility/subjects/test/versions/latest HTTP/1.1
 Host: schemaregistry.example.com
 Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json
@@ -652,7 +652,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -686,7 +686,7 @@ is_compatible (boolean) - 호환가능 여부
 
 **Example request:**
 
-```json
+```shell
 POST /compatibility/subjects/test/versions
 Host: schemaregistry.example.com
 Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json
@@ -713,7 +713,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -739,7 +739,7 @@ Content-Type: application/vnd.schemaregistry.v1+json
 
 **Example request:**
 
-```json
+```shell
 PUT /config HTTP/1.1
 Host: kafkaproxy.example.com
 Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json
@@ -751,7 +751,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -782,7 +782,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -809,7 +809,7 @@ compatibility (string) - 새롭게 변경된 호환성 전략을 표시한다.
 
 **Example request:**
 
-```json
+```shell
 PUT /config/test HTTP/1.1
 Host: schemaregistry.example.com
 Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json
@@ -821,7 +821,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -858,7 +858,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -890,7 +890,7 @@ Accept: application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+j
 
 **Example response:**
 
-```json
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/vnd.schemaregistry.v1+json
 
@@ -909,6 +909,6 @@ subject 이름을 만들어 내기 위한 subject naming strategy가 있다.
 | RecordNameStrategy               | - record 이름으로부터 subject의 이름을 만들고, subject 아래에 서로 다른 schema를 가질 수 있는 논리적으로 관련된 그룹화를 제공한다.</br>- 하나의 topic에 여러개의 schema를 가지는 것을 허용한다.</br>- 이 전략은 메세지가 서로 다른 데이터 구조를 가질때 유용하게 사용할 수 있다.         |
 | TopicRecordNameStrategy          | - topic과 record 이름으로부터 subject의 이름을 만들고, subject 아래에 서로 다른 schema를 가질 수 있는 논리적으로 관련된 그룹화를 제공한다.</br>- 하나의 topic에 여러개의 schema를 가지는 것을 허용한다.</br>- 이 전략은 메세지가 서로 다른 데이터 구조를 가질때 유용하게 사용할 수 있다. |
 
-<참고>
+## Reference
 
-[https://docs.confluent.io/platform/current/schema-registry/serdes-develop/index.html#](https://docs.confluent.io/platform/current/schema-registry/serdes-develop/index.html#)
+- [https://docs.confluent.io/platform/current/schema-registry/serdes-develop/index.html#](https://docs.confluent.io/platform/current/schema-registry/serdes-develop/index.html#)
