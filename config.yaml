@@ -27,9 +27,9 @@ menu:
       name: Notes
       url: notes/
       weight: 60
-    - identifier: etc
+    - identifier: doodles
       name: 끄적끄적
-      url: etc/
+      url: doodles/
       weight: 80
 
 params:

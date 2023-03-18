@@ -19,7 +19,10 @@
   - `brew install hugo`
 
 ```shell
-hugo new --kind default {filename}.md
+# notes
+hugo new --kind notes {filename}.md
+# doodles
+hugo new --kind doodles {filename}.md
 
 # cat {filename-hello}.md
 ---
@@ -27,7 +30,7 @@ title: "Filename hello"
 author: ["조민준"]
 date: "yyyy-MM-dd'T'HH:mm:ss+09:00"
 draft: false
-categories: []
+categories: ["..."]
 tags: []
 ShowToc: true
 ---
