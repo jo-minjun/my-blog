@@ -3,7 +3,7 @@ title: "Shell Script"
 author: ["조민준"]
 date: 2023-01-09T23:30:12+09:00
 draft: false
-categories: ["DevOps"]
+categories: ["Dev"]
 tags: ["Linux"]
 ShowToc: true
 ---
