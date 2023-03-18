@@ -6,6 +6,7 @@ draft: false
 categories: ["Dev"]
 tags: ["DDD"]
 ShowToc: true
+weight: 2
 ---
 
 ## 0. 참고

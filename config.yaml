@@ -48,18 +48,26 @@ params:
     - name: instagram
       url: "https://instagram.com/j0_minjun?igshid=MjkzY2Y1YTY="
 
-  comments: true
-
-  # 사진 상세 보기
-  cover:
-    linkFullImages: true
-
+  ShowFullTextinRSS: true
+  # 포스트 수정 제안
+  editPost:
+    URL: "https://github.com/jo-minjun/my-blog/issues/new"
+    Text: "변경 요청 <-- 내용이 잘못되었다면?"
+  # 페이지 하단 포스트 공유 버튼
+  ShowShareButtons: true
   # 게시물 상단 현재 디렉토리
   ShowBreadCrumbs: true
   # 게시물 하단 네비게이션
   ShowPostNavLinks: true
   # 코드 copy 버튼
   ShowCodeCopyButtons: true
+  # 다크모드
+  defaultTheme: dark
+  # 댓글 활성화
+  comments: true
+  # 사진 상세 보기
+  cover:
+    linkFullImages: true
 
   # 검색 옵션
   # See https://fusejs.io/api/options.html

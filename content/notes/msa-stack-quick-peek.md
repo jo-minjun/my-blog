@@ -6,6 +6,7 @@ draft: false
 categories: ["Dev"]
 tags: ["MSA", "API-First", "CI/CD", "Message-Queue"]
 ShowToc: true
+weight: 1
 ---
 
 ## 1. 요구사항
@@ -151,11 +152,11 @@ ShowToc: true
 - [https://swagger.io/docs/specification/basic-structure/](https://swagger.io/docs/specification/basic-structure/)
 - 간단한 OAS 예시
 
-  ```java
-  openapi: '3.0.1'
+  ```yaml
+  openapi: "3.0.1"
 
   info:
-    title: 'msa-bootcamp'
+    title: "msa-bootcamp"
     version: 1.0.0
 
   servers:
@@ -174,18 +175,18 @@ ShowToc: true
           content:
             application/vnd.vroong.private.v1+json:
               schema:
-                $ref: '#/components/schemas/CreateSingerRequest'
+                $ref: "#/components/schemas/CreateSingerRequest"
         responses:
-          '201':
-            $ref: '#/components/responses/Created'
-          '400':
-            $ref: '#/components/responses/BadRequest'
-          '401':
-            $ref: '#/components/responses/Unauthorized'
-          '403':
-            $ref: '#/components/responses/Forbidden'
-          '500':
-            $ref: '#/components/responses/ServerError'
+          "201":
+            $ref: "#/components/responses/Created"
+          "400":
+            $ref: "#/components/responses/BadRequest"
+          "401":
+            $ref: "#/components/responses/Unauthorized"
+          "403":
+            $ref: "#/components/responses/Forbidden"
+          "500":
+            $ref: "#/components/responses/ServerError"
 
   components:
     schemas:
@@ -193,13 +194,13 @@ ShowToc: true
         type: object
         properties:
           createdAt:
-            $ref: '#/components/schemas/DateTime'
+            $ref: "#/components/schemas/DateTime"
           updatedAt:
-            $ref: '#/components/schemas/DateTime'
+            $ref: "#/components/schemas/DateTime"
           createdBy:
-            $ref: '#/components/schemas/UUID'
+            $ref: "#/components/schemas/UUID"
           updatedBy:
-            $ref: '#/components/schemas/UUID'
+            $ref: "#/components/schemas/UUID"
 
       Page:
         type: object
@@ -233,11 +234,11 @@ ShowToc: true
 
       Singer:
         allOf:
-          - $ref: '#/components/schemas/CommonProperties'
+          - $ref: "#/components/schemas/CommonProperties"
           - type: object
             properties:
               singerId:
-                $ref: '#/components/schemas/LongId'
+                $ref: "#/components/schemas/LongId"
               name:
                 type: string
   ```
