@@ -1,4 +1,4 @@
-baseURL: "https://jo-minjun.github.io/"
+baseURL: "https://jo-minjun.github.io"
 languageCode: "kr"
 title: "minjun's memory"
 theme: "hugo-PaperMod"
