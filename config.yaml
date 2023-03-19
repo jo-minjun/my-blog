@@ -83,7 +83,7 @@ params:
   ShowRssButtonInSectionTermList: true
   # 포스트 수정 제안
   editPost:
-    URL: "https://github.com/jo-minjun/my-blog/issues/new"
+    URL: "https://github.com/jo-minjun/my-blog/issues/new?assignees=jo-minjun&labels=invalid&template=-%ED%8F%AC%EC%8A%A4%ED%8A%B8-%ED%83%80%EC%9D%B4%ED%8B%80-.md&title=%5BPOST%5D"
     Text: "변경 요청 <-- 내용이 잘못되었다면?"
   # 페이지 하단 포스트 공유 버튼
   ShowShareButtons: true
