@@ -43,6 +43,26 @@ menu:
 params:
   # Enhanced SEO
   env: production
+  title: "민준의 블로그"
+  description: "개발하면서 배운 것과 느낀 것 그리고 일상생활에서 느낀 점을 기록합니다."
+  author: ["jo-minjun", "jo minjun", "minjun jo", "minjun", "조민준", "민준"]
+  images: ["logo.png"]
+  keywords:
+    [
+      "minjun's memory",
+      "개발",
+      "개발자",
+      "공부",
+      "자기개발",
+      "산업기능요원",
+      "IT산업기능요원",
+      "산기요",
+      "IT산기요",
+      "병역특례",
+      "IT병역특례",
+      "IT",
+    ]
+
   homeInfoParams:
     Title: "민준의 블로그"
     Content: |
