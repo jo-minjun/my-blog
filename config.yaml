@@ -54,7 +54,9 @@ params:
     - name: instagram
       url: "https://instagram.com/j0_minjun?igshid=MjkzY2Y1YTY="
 
+  # 블로그 RSS
   ShowFullTextinRSS: true
+  ShowRssButtonInSectionTermList: true
   # 포스트 수정 제안
   editPost:
     URL: "https://github.com/jo-minjun/my-blog/issues/new"
