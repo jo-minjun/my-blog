@@ -4,6 +4,8 @@ title: "minjun's memory"
 theme: "hugo-PaperMod"
 
 googleAnalytics: G-ZW1ZBXB1FD
+# robots.txt
+enableRobotsTXT: true
 
 menu:
   main:
@@ -39,6 +41,8 @@ menu:
       weight: 80
 
 params:
+  # Enhanced SEO
+  env: production
   homeInfoParams:
     Title: "민준의 블로그"
     Content: |
