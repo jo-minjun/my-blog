@@ -5,5 +5,5 @@ date: {{ .Date }}
 draft: false
 categories: ["끄적끄적"]
 tags: []
-ShowToc: true
+ShowToc: false
 ---

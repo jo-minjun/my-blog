@@ -20,9 +20,9 @@
 
 ```shell
 # notes
-hugo new --kind notes {filename}.md
+hugo new content/notes/{filename}.md --kind notes
 # doodles
-hugo new --kind doodles {filename}.md
+hugo new content/doodles/{filename}.md --kind doodles
 
 # cat {filename-hello}.md
 ---
