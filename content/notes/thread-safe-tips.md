@@ -1,5 +1,5 @@
 ---
-title: "사소한 ThreadLocal Tips"
+title: "사소한 Thread-safe Tips"
 author: ["조민준"]
 date: 2023-07-13T18:40:44+09:00
 draft: false

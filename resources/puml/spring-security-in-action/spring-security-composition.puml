@@ -1,0 +1,22 @@
+@startuml
+
+actor Client as c
+rectangle Filter as f
+rectangle AuthenticationManager as am
+rectangle AuthenticationProvider as ap
+rectangle UserDetailsService as uds
+rectangle PasswordEncoder as pe
+rectangle SecurityContext as sc
+
+c -D-> f: 1. 인증 필터가 요청을 가로챈다.
+f -D-> am: 2. 인증 책임이\nAuthenticationManager\n에 위임된다.
+am -D-> ap: 3. AuthenticationManager가 \n인증 논리를 구현하는 \nAuthenticationProvider를 \n이용한다.
+ap .R.> uds: 4. UserDetailsService로 \n사용자를 찾는다.
+ap .R.> pe: 5. Client가 제출한 암호를 \nPasswordEncoder로 검증한다.
+ap -U-> am: 6. 인증 결과가 필터에 반환된다.
+am -U-> f
+f -R-> sc: 인증된 사용자에 대한 세부 정보가 \nSecurityContext에 저장된다.
+
+uds -[hidden]D- pe
+
+@enduml
