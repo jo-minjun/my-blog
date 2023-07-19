@@ -8,6 +8,9 @@ tags: ["MSA", "API-First", "CI/CD", "Message-Queue"]
 ShowToc: true
 ---
 
+> 본 포스팅은 (주)부릉의 MSA 스택에 대한 내용으로, 모든 MSA가 아래와 같은 내용으로 구성되는 것이 아닙니다.
+> (주)부릉의 온보딩 내용을 정리한 포스팅입니다.
+
 ## 1. 요구사항
 
 - 아주 간단한 웹 기반 ITunes
