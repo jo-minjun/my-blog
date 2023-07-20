@@ -148,7 +148,7 @@ public class SecurityConfiguration {
           // BCryptPasswordEncoder는 해쉬를 생성할 때마다 다른 salt 값을 사용합니다.
           // 따라서 matches 메서드를 사용해서 값이 일치하는지 검증해야 합니다.
           if (passwordEncoder.matches(password, userDetails.getPassword())) {
-              return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
+              return new UsernamePasswordAuthenticationToken(username, password, userDetails.getAuthorities());
           }
 
           throw new AuthenticationCredentialsNotFoundException("Failed to authenticate");
