@@ -8,7 +8,7 @@ tags: ["MSA", "API-First", "CI/CD", "Message-Queue"]
 ShowToc: true
 ---
 
-> 본 포스팅은 (주)부릉의 MSA 스택에 대한 내용으로, 모든 MSA가 아래와 같은 내용으로 구성되는 것이 아닙니다.
+> 본 포스팅은 (주)부릉의 MSA 스택에 대한 내용으로, 모든 MSA가 아래와 같은 내용으로 구성되는 것이 아닙니다.
 > (주)부릉의 온보딩 내용을 정리한 포스팅입니다.
 
 ## 1. 요구사항
@@ -300,7 +300,7 @@ ShowToc: true
 
 ```bash
 ./gradlew :clients:clean :clients:publish -Dorg.gradle.internal.publish.checksums.insecure=true
-# 배포 결과는 https://nexus.mm.meshkorea.net/ 에서 확인할 수 있습니다.
+# 배포 결과는 nexus에서 확인할 수 있습니다.
 ```
 
 ## 4. Controller 작성
