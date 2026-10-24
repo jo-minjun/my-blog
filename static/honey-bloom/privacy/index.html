@@ -11,81 +11,157 @@
   nav a { margin-right: 12px; }
   hr { margin: 3rem 0; }
   .meta { color: #777; font-size: .9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { border: 1px solid #8884; padding: 6px 8px; text-align: left; vertical-align: top; }
 </style>
 </head>
 <body>
-<nav><a href="#ko">한국어</a><a href="#en">English</a></nav>
+<nav><a href="#ko">한국어</a><a href="#en">English</a><a href="../support/">지원 / Support</a></nav>
 
 <section id="ko" lang="ko">
 <h1>Honey Bloom 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 7일</p>
+<p class="meta">시행일: 2026년 10월 24일 (이전 버전: 2026년 10월 7일)</p>
 
 <p>Honey Bloom(이하 "앱")은 개인 개발자 조민준(이하 "개발자")이 제공하는 모바일 퍼즐 게임입니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
 
-<h2>1. 계정과 게임 기록</h2>
-<p>앱은 회원가입이나 로그인을 요구하지 않습니다. 게임 진행, 보유 재화, 설정, 닉네임은 기기 안에만 저장되며 개발자 서버로 전송하지 않습니다. 앱을 삭제하면 이 기록도 함께 삭제됩니다.</p>
+<h2>1. 기기 안에만 저장하는 정보</h2>
+<p>앱은 회원가입이나 로그인을 요구하지 않습니다. 게임 진행, 보유 재화, 설정, 광고 보상 지급 기록(광고 시도 ID와 영수증 ID)은 기기 안에만 저장되며 개발자 서버로 전송하지 않습니다. 앱을 삭제하면 이 기록도 함께 삭제됩니다.</p>
 
-<h2>2. 광고 (Google AdMob)</h2>
-<p>앱은 사용자가 원할 때만 보는 보상형 광고(하트 충전, 클리어 보상 2배, 배속 시간)를 Google AdMob으로 제공합니다. 광고를 요청하고 보여 주기 위해 Google은 다음 정보를 수집·처리할 수 있습니다.</p>
+<h2>2. 리그 (온라인 순위)</h2>
+<p>앱의 리그는 같은 조에 배정된 최대 30명과 한 주 동안 점수를 겨루는 기능입니다. 단계를 깨 리그 점수가 생기면 앱이 자동으로 익명 계정을 만들어 리그에 참가하고, 다음 정보를 개발자의 리그 서버로 보냅니다.</p>
+<table>
+  <tr><th>정보</th><th>목적</th></tr>
+  <tr><td>익명 계정 ID (앱이 무작위로 만든 식별자)</td><td>참가자 구별, 조 배정</td></tr>
+  <tr><td>닉네임</td><td>순위표 표시</td></tr>
+  <tr><td>시즌, 계급, 누적 점수</td><td>순위 계산, 승급·강등</td></tr>
+</table>
+<ul>
+  <li>닉네임과 점수는 같은 조의 다른 참가자에게 순위표로 보입니다. 실명이나 연락처처럼 본인을 알아볼 수 있는 닉네임은 쓰지 마세요.</li>
+  <li>이메일, 전화번호, 기기 광고 식별자, 위치는 리그 서버로 보내지 않습니다.</li>
+  <li>서버에 요청할 때 IP 주소 등 접속 기록이 서버 제공업체의 로그에 남을 수 있습니다.</li>
+</ul>
+
+<h2>3. 광고 (Google AdMob)</h2>
+<p>앱은 Google AdMob으로 두 가지 광고를 보여 줍니다.</p>
+<ul>
+  <li>보상형 광고: 사용자가 원할 때만 봅니다(하트 충전, 클리어 보상 2배, 배속 시간, 실패 후 계속하기).</li>
+  <li>전면 광고: 실패한 판의 결과 화면을 떠날 때 일부 확률로 표시됩니다. 보상은 없습니다.</li>
+</ul>
+<p>광고를 요청하고 보여 주기 위해 Google은 다음 정보를 수집·처리할 수 있습니다.</p>
 <ul>
   <li>기기 광고 식별자(Android 광고 ID, iOS IDFA — iOS는 사용자가 추적을 허용한 경우에만)</li>
-  <li>IP 주소, 기기·운영체제 정보, 앱 사용 및 광고 상호작용 정보</li>
+  <li>IP 주소와 이를 통한 대략적 위치, 기기·운영체제 정보, 앱 사용 및 광고 상호작용 정보, 진단 정보</li>
 </ul>
 <p>이 정보는 Google의 정책에 따라 처리되며 개발자는 이를 직접 받거나 보관하지 않습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites">Google이 파트너 앱의 정보를 사용하는 방법</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요.</p>
-<p>광고 보상 지급 기록(광고 시도 ID와 영수증 ID)은 중복 지급을 막기 위해 기기 안에만 저장됩니다.</p>
 
-<h2>3. 동의와 선택</h2>
+<h2>4. 보유 기간과 파기</h2>
+<ul>
+  <li>리그 기록(익명 계정 ID, 닉네임, 시즌·계급·점수)은 지난 시즌 순위를 보여 주기 위해 리그 서비스를 운영하는 동안 보관합니다.</li>
+  <li>삭제를 요청하거나 리그 서비스를 종료하면 해당 기록을 지체 없이 서버 데이터베이스에서 삭제하며, 복구할 수 없게 지웁니다.</li>
+  <li>기기 안의 정보는 앱을 삭제하면 함께 지워집니다.</li>
+</ul>
+
+<h2>5. 처리 위탁과 국외 이전</h2>
+<table>
+  <tr><th>받는 자</th><th>내용</th></tr>
+  <tr><td>Supabase, Inc.<br>(<a href="https://supabase.com/privacy">개인정보처리방침</a>)</td><td>처리 위탁: 리그 서버 운영과 데이터 저장. 항목은 2번의 리그 기록과 접속 기록이며, 데이터는 대한민국 서울 지역(AWS ap-northeast-2)에 저장합니다. 보유 기간은 4번과 같습니다.</td></tr>
+  <tr><td>Google LLC (미국)<br>(<a href="https://support.google.com/policies/contact/general_privacy_form">문의 양식</a>)</td><td>국외 이전: 광고 요청·표시·측정. 항목은 3번의 광고 관련 정보이며, 광고를 요청할 때마다 인터넷으로 Google 서버(미국 등)로 전송됩니다. 보유 기간은 Google 정책을 따릅니다. iOS 추적 허용을 거부하거나 Android 광고 ID를 삭제해 맞춤형 광고를 거부할 수 있으며, 광고 정보 전송 자체를 원하지 않으면 앱을 사용하지 않아야 합니다.</td></tr>
+</table>
+
+<h2>6. 알림</h2>
+<p>하트가 다시 찼을 때 기기 안에서 예약한 알림을 보냅니다. 알림을 위해 서버로 보내는 정보는 없으며, 기기 설정에서 끌 수 있습니다.</p>
+
+<h2>7. 동의와 선택(맞춤형 광고 포함)</h2>
 <ul>
   <li>유럽경제지역·영국·스위스 사용자에게는 처음 실행할 때 Google의 동의 화면이 표시되며, 앱의 설정 &gt; 개인정보 설정에서 언제든 바꿀 수 있습니다.</li>
   <li>iOS에서는 추적 허용 여부를 묻습니다. 허용하지 않아도 게임과 광고 보상은 똑같이 이용할 수 있으며, 이 경우 맞춤형이 아닌 광고가 표시됩니다. 기기 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 바꿀 수 있습니다.</li>
   <li>Android에서는 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
+  <li>리그 기록의 열람·정정·삭제·처리 정지를 요청할 수 있습니다. 10번의 연락처로 리그 화면에 보이는 닉네임과 참가 시기를 알려 주시면, 확인한 뒤 10일 안에 처리하고 결과를 알려 드립니다.</li>
 </ul>
 
-<h2>4. 아동</h2>
+<h2>8. 아동</h2>
 <p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
 
-<h2>5. 방침 변경</h2>
-<p>온라인 리그 등 새 기능으로 처리하는 정보가 달라지면 이 페이지를 고치고 시행일을 갱신합니다.</p>
+<h2>9. 방침 변경</h2>
+<p>처리하는 정보가 달라지면 이 페이지를 고치고 시행일을 갱신합니다.</p>
 
-<h2>6. 문의</h2>
-<p>개인정보 관련 문의: <a href="mailto:alswns9288@gmail.com">alswns9288@gmail.com</a></p>
+<h2>10. 개인정보 보호책임자와 문의</h2>
+<p>개인정보 보호 책임자: 조민준<br>
+문의: <a href="mailto:alswns9288@gmail.com">alswns9288@gmail.com</a></p>
 </section>
 
 <hr>
 
 <section id="en" lang="en">
 <h1>Honey Bloom Privacy Policy</h1>
-<p class="meta">Effective date: October 7, 2026</p>
+<p class="meta">Effective date: October 24, 2026 (previous version: October 7, 2026)</p>
 
 <p>Honey Bloom (the "App") is a mobile puzzle game provided by independent developer Minjun Jo (the "Developer"). This policy explains what information the App handles and how.</p>
 
-<h2>1. Accounts and game data</h2>
-<p>The App requires no sign-up or login. Game progress, in-game currency, settings and your nickname are stored only on your device and are not sent to the Developer's servers. Deleting the App deletes this data.</p>
+<h2>1. Data stored only on your device</h2>
+<p>The App requires no sign-up or login. Game progress, in-game currency, settings and ad reward records (ad attempt and receipt IDs) are stored only on your device and are not sent to the Developer's servers. Deleting the App deletes this data.</p>
 
-<h2>2. Advertising (Google AdMob)</h2>
-<p>The App offers optional rewarded ads (extra life, doubled clear reward, boost time) through Google AdMob. To request and show ads, Google may collect and process:</p>
+<h2>2. League (online rankings)</h2>
+<p>In the league you compete for a week against up to 30 players in the same group. Once you clear a stage and earn league points, the App automatically creates an anonymous account, joins the league and sends the following to the Developer's league server.</p>
+<table>
+  <tr><th>Data</th><th>Purpose</th></tr>
+  <tr><td>Anonymous account ID (a random identifier created by the App)</td><td>Telling players apart, group assignment</td></tr>
+  <tr><td>Nickname</td><td>Showing the leaderboard</td></tr>
+  <tr><td>Season, tier, total score</td><td>Ranking, promotion and demotion</td></tr>
+</table>
+<ul>
+  <li>Your nickname and score are visible to other players in your group. Do not use a nickname that identifies you, such as your real name or contact details.</li>
+  <li>No email, phone number, advertising identifier or location is sent to the league server.</li>
+  <li>Connection records such as your IP address may appear in the hosting provider's logs when the App contacts the server.</li>
+</ul>
+
+<h2>3. Advertising (Google AdMob)</h2>
+<p>The App shows two kinds of ads through Google AdMob.</p>
+<ul>
+  <li>Rewarded ads, watched only when you choose (extra life, doubled clear reward, boost time, continue after failing).</li>
+  <li>Interstitial ads, shown some of the time when you leave the result screen of a failed round. They give no reward.</li>
+</ul>
+<p>To request and show ads, Google may collect and process:</p>
 <ul>
   <li>Device advertising identifiers (Android Advertising ID; iOS IDFA only if you allow tracking)</li>
-  <li>IP address, device and operating-system information, app usage and ad interaction data</li>
+  <li>IP address and the approximate location derived from it, device and operating-system information, app usage and ad interaction data, diagnostic data</li>
 </ul>
 <p>Google processes this information under its own policies; the Developer does not receive or store it. See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-<p>Ad reward records (ad attempt and receipt IDs) are stored only on your device to prevent duplicate rewards.</p>
 
-<h2>3. Consent and choices</h2>
+<h2>4. Retention and deletion</h2>
+<ul>
+  <li>League records (anonymous account ID, nickname, season, tier and score) are kept while the league service runs so that past seasons can be shown.</li>
+  <li>When you ask for deletion or the league service ends, the records are deleted from the server database without delay and cannot be recovered.</li>
+  <li>Data on your device is deleted when you delete the App.</li>
+</ul>
+
+<h2>5. Processors and international transfers</h2>
+<table>
+  <tr><th>Recipient</th><th>Details</th></tr>
+  <tr><td>Supabase, Inc.<br>(<a href="https://supabase.com/privacy">Privacy Policy</a>)</td><td>Processor: runs the league server and stores its data. Covers the league records and connection records in section 2, stored in Seoul, South Korea (AWS ap-northeast-2). Retention as in section 4.</td></tr>
+  <tr><td>Google LLC (USA)<br>(<a href="https://support.google.com/policies/contact/general_privacy_form">contact form</a>)</td><td>International transfer: requesting, showing and measuring ads. Covers the ad-related data in section 3, sent over the internet to Google servers (USA and elsewhere) with each ad request. Retention follows Google's policies. You can refuse personalized ads by declining tracking on iOS or deleting your Android advertising ID; if you do not want ad data sent at all, please do not use the App.</td></tr>
+</table>
+
+<h2>6. Notifications</h2>
+<p>The App schedules a notification on your device when your hearts are refilled. Nothing is sent to a server for this, and you can turn it off in device settings.</p>
+
+<h2>7. Consent and choices (including personalized ads)</h2>
 <ul>
   <li>Users in the EEA, UK and Switzerland see Google's consent screen on first launch and can change it anytime in the App under Settings &gt; Privacy settings.</li>
   <li>On iOS you are asked whether to allow tracking. You can play and earn ad rewards the same way either way; without permission you get non-personalized ads. Change it in Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
   <li>On Android you can reset or delete your advertising ID in device settings.</li>
+  <li>You can ask to see, correct, delete or stop the processing of your league records. Send the nickname shown in the league and when you played to the contact in section 10; we will handle it within 10 days and tell you the result.</li>
 </ul>
 
-<h2>4. Children</h2>
+<h2>8. Children</h2>
 <p>The App is not directed to children under 13 and does not knowingly collect their personal information.</p>
 
-<h2>5. Changes</h2>
-<p>If new features such as an online league change what information is processed, this page will be updated with a new effective date.</p>
+<h2>9. Changes</h2>
+<p>If the information we process changes, this page will be updated with a new effective date.</p>
 
-<h2>6. Contact</h2>
-<p>Privacy questions: <a href="mailto:alswns9288@gmail.com">alswns9288@gmail.com</a></p>
+<h2>10. Privacy officer and contact</h2>
+<p>Privacy contact: Minjun Jo<br>
+Email: <a href="mailto:alswns9288@gmail.com">alswns9288@gmail.com</a></p>
 </section>
 </body>
 </html>
